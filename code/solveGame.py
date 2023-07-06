@@ -21,13 +21,13 @@ def solveGame(q_table):
                 best_actions = [a]
             elif q_table.get((current_state, a), 0) == q_table.get((current_state, best_actions[0]), 0):
                 best_actions.append(a)
-            print(q_table.get((current_state, a), 0))
+            # print(q_table.get((current_state, a), 0))
 
         action = random.choice(best_actions)
 
         environment.doAction(action)
         moves += 1
-        #time.sleep(2)
+        # time.sleep(2)
 
         if moves > 120:
             return None
